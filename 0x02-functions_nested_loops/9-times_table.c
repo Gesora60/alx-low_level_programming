@@ -6,8 +6,9 @@
  *return: alays 0
  */
 void times_table(void) {
-    int result;
-    for (int i = 0; i <= 10; i++) {
+  int i;
+  int result;
+    for (i = 0; i <= 10; i++) {
         result = 9 * i;
         if (i != 0) {
             _putchar(',');
