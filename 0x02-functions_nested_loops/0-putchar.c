@@ -2,10 +2,10 @@
 
 /**
  *function: print the phrase _putchar
- *main: Print _putchar
+ *main - Print _putchar
  *folloed by a new line
  * 
- *return (0)
+ *return : always 0
  */
 int main(void)
 {
