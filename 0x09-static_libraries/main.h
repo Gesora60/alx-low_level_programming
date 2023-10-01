@@ -1,5 +1,5 @@
-#ifndef main_h
-#define main_h
+#ifndef FILE_MAIN
+#define FILE_MAIN
 
 /**
  *main.h file
