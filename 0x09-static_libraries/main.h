@@ -1,12 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/**
- *main.h file
- *
- *declaration of all prototypes used in this work
- *
- */
+/*a list that was given from the task 0 */
 
 int _putchar(char c);
 int _islower(int c);
