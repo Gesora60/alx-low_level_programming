@@ -1,50 +1,32 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "dog.h"
 
 /**
- * new_dog - creates a new dog
- * @name: dog's name
- * @age: dog's age
- * @owner: dog's owner
+ * print_dog - prints a struct dog
+ * @d: dog's structure
  *
- * Return: a pointer to the structure
  */
 
-dog_t *new_dog(char *name, float age, char *owner)
+void print_dog(struct dog *d)
 {
-	int i, j, k;
-	dog_t *p;
-
-	p = malloc(sizeof(dog_t));
-
-	if (p == NULL)
+	if (d)
 	{
-		free(p);
-		return (NULL);
+		if (!(d->name))
+		{
+			printf("Name: (nil)\n");
+		}
+		else
+		{
+			printf("Name: %s\n", d->name);
+		}
+		printf("Age: %f\n", d->age);
+		if (!(d->owner))
+		{
+			printf("Owner: (nil)\n");
+		}
+		else
+		{
+			printf("Owner: %s\n", d->owner);
+		}
 	}
-	for (i = 0; name[i]; i++)
-		;
-	for (j = 0; owner[j]; j++)
-		;
-	p->name = malloc(i + 1);
-	p->owner = malloc(j + 1);
-
-	if (p->name == NULL || p->owner == NULL)
-	{
-		free(p->name), free(p->owner), free(p);
-		return (NULL);
-	}
-	for (k = 0; k < i; k++)
-	{
-		p->name[k] = name[k];
-	}
-	p->name[k] = '\0';
-	for (k = 0; k < j; k++)
-	{
-		p->owner[k] = owner[k];
-	}
-	p->owner[k] = '\0';
-	p->age = age;
-	return (p);
 }
